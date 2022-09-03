@@ -22,7 +22,7 @@ static const char col_bg2[]        = "#005577";
 static const char col_bg[]       = "#1b0c30";
 static const char col_border[]       = "#444444";
 static const char col_fg[]       = "#8cd5fa";
-static const char col_fg2[]       = "#ffcaf4";
+static const char col_fg2[]       = "#fc53d8";
 static const char col_bg2[]        = "#1b0c30";
 static const char col_border2[]     = "#3337b0";
 
@@ -30,16 +30,16 @@ static const char *colors[][3]      = {
         /*               fg         bg         border   */
         [SchemeNorm] = { col_fg,    col_bg,    col_border },
         [SchemeSel]  = { col_fg2,   col_bg2,   col_border2},
-	[2]	     = { "#000000", "#ffff00", "#ff0000" },
-	[3]	     = { "#ffffff", "#ff0000", "#ff0000" },
-	[4]	     = { "#d88ff7", "#1b0c30", "#ff0000" },
-	[5]	     = { "#083a1a", "#d88ff7", "#ff0000" },
-	[6]	     = { "#fa82e2", "#d88ff7", "#ff0000" },
-	[7]	     = { "#083a1a", "#fa82e2", "#ff0000" },
-	[8]	     = { "#083a1a", "#d88ff7", "#ff0000" },
-	[9]	     = { "#083a1a", "#d88ff7", "#ff0000" },
-	[0]	     = { "#083a1a", "#d88ff7", "#ff0000" },
+	[0]	     = { "#d88ff7", "#1b0c30", "#ff0000" },
 	[1]	     = { "#083a1a", "#d88ff7", "#ff0000" },
+	[2]	     = { "#fa82e2", "#d88ff7", "#ff0000" },
+	[3]	     = { "#083a1a", "#fa82e2", "#ff0000" },
+	[4]	     = { "#f53b9b", "#fa82e2", "#ff0000" },
+	[5]	     = { "#083a1a", "#f52b9b", "#ff0000" },
+	[6]	     = { "#f52052", "#f52b9b", "#ff0000" },
+	[7]	     = { "#083a1a", "#f52052", "#ff0000" },
+	[8]	     = { "#000000", "#ffff00", "#ff0000" },
+	[9]	     = { "#ffffff", "#ff0000", "#ff0000" },
 };
 
 /* tagging */
