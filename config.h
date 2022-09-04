@@ -7,7 +7,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 // change this to font 1 and font 2 like I did for st
 //that might fix the size situation
-static const char *fonts[]          = { "monospace:size=10","OpenSansEmoji:size=10","LiterationMono NF:pixelsize=20:intialias=true:autohint=true"};
+static const char *fonts[]          = { "monospace:size=13","OpenSansEmoji:size=10","LiterationMono NF:pixelsize=24:intialias=true:autohint=true"};
 static const char dmenufont[]       = {"monospace:size=10"};
 
 /* default dwm colorscheme
@@ -30,20 +30,22 @@ static const char *colors[][3]      = {
         /*               fg         bg         border   */
         [SchemeNorm] = { col_fg,    col_bg,    col_border },
         [SchemeSel]  = { col_fg2,   col_bg2,   col_border2},
+
+	//colors below are made for the arrows and blocks on the status bar
 	[0]	     = { "#d88ff7", "#1b0c30", "#ff0000" },
 	[1]	     = { "#083a1a", "#d88ff7", "#ff0000" },
-	[2]	     = { "#fa82e2", "#d88ff7", "#ff0000" },
-	[3]	     = { "#083a1a", "#fa82e2", "#ff0000" },
-	[4]	     = { "#f53b9b", "#fa82e2", "#ff0000" },
-	[5]	     = { "#083a1a", "#f52b9b", "#ff0000" },
-	[6]	     = { "#f52052", "#f52b9b", "#ff0000" },
+	[2]	     = { "#f772dd", "#d88ff7", "#ff0000" },
+	[3]	     = { "#083a1a", "#f772dd", "#ff0000" },
+	[4]	     = { "#f760ae", "#f772dd", "#ff0000" },
+	[5]	     = { "#083a1a", "#f760ae", "#ff0000" },
+	[6]	     = { "#f52052", "#f760ae", "#ff0000" },
 	[7]	     = { "#083a1a", "#f52052", "#ff0000" },
 	[8]	     = { "#000000", "#ffff00", "#ff0000" },
 	[9]	     = { "#ffffff", "#ff0000", "#ff0000" },
 };
 
 /* tagging */
-static const char *tags[] = { "@", "www", ">_", "{}", "^_^", "?", "~/", "[-_-]", "[-_-]" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
         /* xprop(1):
