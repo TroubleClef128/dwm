@@ -8,8 +8,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad	    = 5;	/* vertical padding of bar */
 static const int sidepad	    = 10;	/* horizontal padding of bar */
-static const char *fonts[]          = { "monospace:size=13","OpenSansEmoji:size=10","LiterationMono NF:pixelsize=24:intialias=true:autohint=true"};
-static const char dmenufont[]       = {"monospace:size=10"};
+static const char *fonts[]          = { "OpenSans:size=11.8","OpenSansEmoji:size=10","LiterationMono NF:pixelsize=24:intialias=true:autohint=true"};
+static const char dmenufont[]       = {"OpenSans:size=11.8"};
 
 /* default dwm colorscheme
 static const char col_bg[]       = "#222222";
@@ -46,7 +46,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
         /* xprop(1):
@@ -84,14 +84,16 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
+
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg2, "-sf", col_fg2, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-x", "10", "-y", "5", "-z", "1346", "-fn", dmenufont, NULL };
+//dmenu has manual entry for padding to match the bar
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = {"firefox", NULL};
 static const char *flameshot[] = {"flameshot", "gui", NULL};
 static const char *ranger[] = {"st", "ranger", NULL};
-static const char *google[] = {"surf", "google.com", NULL};
+static const char *spotify[] = {"st", "spt", NULL};
 
 static Key keys[] = {
         /* modifier                     key        function        argument */
@@ -100,7 +102,7 @@ static Key keys[] = {
         { MODKEY|ShiftMask,             XK_w,	   spawn,	   {.v = firefoxcmd } },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = flameshot } },
 	{ MODKEY|ShiftMask,		XK_f,	   spawn,	   {.v = ranger } },
-	{ MODKEY|ShiftMask,		XK_g,	   spawn,	   {.v = google } },
+	{ MODKEY|ShiftMask,		XK_m,	   spawn,	   {.v = spotify } },
         { MODKEY,                       XK_b,      togglebar,      {0} },
         { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
         { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
