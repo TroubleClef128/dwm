@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad	    = 5;	/* vertical padding of bar */
 static const int sidepad	    = 10;	/* horizontal padding of bar */
-static const char *fonts[]          = { "OpenSans:size=11.8","OpenSansEmoji:size=10","LiterationMono NF:pixelsize=24:intialias=true:autohint=true"};
+static const char *fonts[]          = { "OpenSans:size=11.8","LiterationMono NF:pixelsize=24:intialias=true:autohint=true"};
 static const char dmenufont[]       = {"OpenSans:size=11.8"};
 
 /* default dwm colorscheme
@@ -91,6 +91,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-x", "10", "-y",
 //dmenu has manual entry for padding to match the bar
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = {"firefox", NULL};
+static const char *obsidian[] = {"obsidian", NULL};
 static const char *flameshot[] = {"flameshot", "gui", NULL};
 static const char *ranger[] = {"st", "ranger", NULL};
 static const char *spotify[] = {"st", "spt", NULL};
@@ -100,6 +101,7 @@ static Key keys[] = {
         { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
         { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
         { MODKEY|ShiftMask,             XK_w,	   spawn,	   {.v = firefoxcmd } },
+	{ MODKEY|ShiftMask,		XK_e,	   spawn,	   {.v = obsidian } },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = flameshot } },
 	{ MODKEY|ShiftMask,		XK_f,	   spawn,	   {.v = ranger } },
 	{ MODKEY|ShiftMask,		XK_m,	   spawn,	   {.v = spotify } },
