@@ -1,15 +1,15 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx	    = 5;	/* gaps between windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int gappx	    = 15;	/* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad	    = 5;	/* vertical padding of bar */
+static const int vertpad	    = 10;	/* vertical padding of bar */
 static const int sidepad	    = 10;	/* horizontal padding of bar */
-static const char *fonts[]          = { "OpenSans:size=11.8","LiterationMono NF:pixelsize=24:intialias=true:autohint=true"};
-static const char dmenufont[]       = {"OpenSans:size=11.8"};
+static const char *fonts[]          = { "OpenSans:size=14:bold","SourceCodePro:style=mono:pixelsize=30:autohint=true","LiterationMono NF:pixelsize=22:intialias=true:autohint=true"};
+static const char dmenufont[]       = {"OpenSans:size=14"};
 
 /* default dwm colorscheme
 static const char col_bg[]       = "#222222";
@@ -46,7 +46,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "ﲵ", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
         /* xprop(1):
@@ -87,7 +87,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-x", "10", "-y", "5", "-z", "1346", "-fn", dmenufont, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-x", "10", "-y", "10", "-z", "1346", "-fn", dmenufont, NULL };
 //dmenu has manual entry for padding to match the bar
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = {"firefox", NULL};
@@ -95,6 +95,7 @@ static const char *obsidian[] = {"obsidian", NULL};
 static const char *flameshot[] = {"flameshot", "gui", NULL};
 static const char *ranger[] = {"st", "ranger", NULL};
 static const char *spotify[] = {"st", "spt", NULL};
+static const char *wallpaper[] = {"nitrogen", "--set-zoom-fill", "--random", "~/Pictures/Backgrounds", NULL};
 
 static Key keys[] = {
         /* modifier                     key        function        argument */
@@ -105,6 +106,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = flameshot } },
 	{ MODKEY|ShiftMask,		XK_f,	   spawn,	   {.v = ranger } },
 	{ MODKEY|ShiftMask,		XK_m,	   spawn,	   {.v = spotify } },
+  { MODKEY|ShiftMask,   XK_b,    spawn,    {.v = wallpaper } },
         { MODKEY,                       XK_b,      togglebar,      {0} },
         { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
         { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
